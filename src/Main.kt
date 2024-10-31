@@ -11,7 +11,7 @@ class operacaoLista<T:Any>{
 
     override fun toString(): String = if(tamanho == 0) "lista vazia" else "a lista contém $tamanho itens"
 
-    fun insere(valor:Int):operacaoLista<T> = apply {
+    fun insere(valor:T):operacaoLista<T> = apply {
         inicio = Nodo(valor = valor, proximoNodo = inicio)
         if (fim == null) fim = inicio
         tamanho++
